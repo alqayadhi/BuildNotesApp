@@ -25,7 +25,8 @@ body{
     padding: 15px 20px 20px;
 }
 
-.add-box, .icon, .bottom-content, .settings .menu li, .popup, header{
+.add-box, .icon, .bottom-content, 
+.settings .menu li, .popup, header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,6 +58,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.note .details {
+    max-height: 165px;
+    overflow-y: auto;
 }
 
 .note p{
@@ -103,7 +109,7 @@ body{
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     transition: transform 0.2s ease;
 }
-.settings:hover .menu {
+.settings.show .menu {
     transform: scale(1);
 }
 .settings .menu li{
@@ -151,6 +157,10 @@ body{
 .popup-box.show, .popup-box .popup{
     opacity: 1;
     pointer-events: auto;
+}
+
+.popup-box button{
+    cursor: pointer;
 }
 
 .popup .content {
